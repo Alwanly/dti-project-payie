@@ -1,9 +1,10 @@
 import * as React from 'react';
-import {Button,Text, View,FlatList,SafeAreaView,Image} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import 'react-native-gesture-handler';
 import MaterialIcon from 'react-native-vector-icons/Ionicons';
-import {HomeScreen,ProfileScreen,TransaksiScreen} from './HomeScreen';
+import Home from './HomeActivity';
+import Transaksi from './TransaksiActivity';
+import Profile from './ProfileActivity';
 const MenuBottom = createBottomTabNavigator();
   
 const MenuHome = ()=>{  
@@ -11,7 +12,7 @@ const MenuHome = ()=>{
         <MenuBottom.Navigator>
             <MenuBottom.Screen 
             name="Home" 
-            component={HomeScreen}
+            component={Home}
             options={{
                 tabBarLabel:'Home',
                 tabBarIcon: ({size,color})=>(<MaterialIcon name="home-outline" size={size} color={color}/>)
@@ -19,7 +20,7 @@ const MenuHome = ()=>{
             />
             <MenuBottom.Screen 
             name="Transaksi"
-            component={TransaksiScreen}
+            component={Transaksi}
             options={{
                 tabBarLabel:'Transaksi',
                 tabBarIcon: ({size,color})=>(
@@ -28,7 +29,7 @@ const MenuHome = ()=>{
             }}/>
             <MenuBottom.Screen
                 name="Profile"
-                component={ProfileScreen}
+                component={Profile}
                 options={{
                     tabBarLabel:'Profile',
                     tabBarIcon: ({size,color})=>(

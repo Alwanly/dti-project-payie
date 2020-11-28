@@ -8,7 +8,7 @@
 
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import {AppStack} from './components/StackNavigator';
+import {AppStack} from './navigation/AppNavigation';
 const App = ()=>{
   return(
   <NavigationContainer>
